@@ -80,7 +80,38 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   white-space: nowrap;
 }
 .logo span { color: var(--accent); }
-.logo-img { height: 60px; width: auto; }
+.logo-wrap {
+  display: inline-flex;
+  animation: logoFloat 4.5s ease-in-out infinite;
+}
+.logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1), filter .3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.09) rotate(-4deg);
+  filter: drop-shadow(0 6px 14px rgba(184,118,63,.35));
+}
+.logo-img.logo-pulse {
+  animation: logoPulse .6s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-2deg); }
+}
+@keyframes logoPulse {
+  0% { transform: scale(1) rotate(0deg); }
+  35% { transform: scale(1.2) rotate(-12deg); }
+  65% { transform: scale(.93) rotate(7deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-wrap { animation: none; }
+  .logo-img, .logo-img.logo-pulse { animation: none; transition: none; }
+}
 .main-nav {
   display: flex;
   gap: 26px;
