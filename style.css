@@ -71,7 +71,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  height: 72px;
+  height: 84px;
 }
 .logo {
   font-size: 20px;
@@ -80,7 +80,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   white-space: nowrap;
 }
 .logo span { color: var(--accent); }
-.logo-img { height: 44px; width: auto; }
+.logo-img { height: 60px; width: auto; }
 .main-nav {
   display: flex;
   gap: 26px;
@@ -297,7 +297,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 72px;
+    top: 84px;
     inset-inline: 0;
     background: var(--bg-alt);
     padding: 16px 24px;
